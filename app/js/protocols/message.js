@@ -1,6 +1,6 @@
 'use strict';
 
-importScripts('/service-worker-boilerplate/app/js/protocols/utils/uuid.js');
+importScripts('/sw/app/js/protocols/utils/uuid.js');
 
 function Message(tag, uuid) {
   if (!tag) {

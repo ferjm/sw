@@ -1,11 +1,11 @@
 'use strict';
 
-importScripts('/service-worker-boilerplate/app/js/protocols/protocol_helper.js');
+importScripts('/sw/app/js/protocols/protocol_helper.js');
 
 function ServiceAPI(callback) {
-  var kWorkerUrl = '/service-worker-boilerplate/app/service_worker.js';
+  var kWorkerUrl = '/sw/app/service_worker.js';
   var kWorkerOptions = {
-    'scope': [ '/service-worker-boilerplate/app/' ]
+    'scope': [ '/sw/app/' ]
   };
   navigator.serviceWorker.register(kWorkerUrl, kWorkerOptions).then(
     (function onSuccess(worker) {
