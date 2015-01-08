@@ -40,7 +40,7 @@ worker.onfetch = function(e) {
       return response;
     }, function(error) {
       debug('Could not fetch ' + e.request.url + ' from cache. Error: ' + error);
-      return Promise.reject();
+      return Promise.resolve();
     })
   )
 };
