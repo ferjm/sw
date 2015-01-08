@@ -38,6 +38,9 @@ worker.onfetch = function(e) {
         debug('Fetched from cache ' + e.request.url);
       }
       return response;
+    }, function(error) {
+      debug('Could not fetch ' + e.request.url + ' from cache. Error: ' + error);
+      return Promise.reject();
     })
   )
 };
